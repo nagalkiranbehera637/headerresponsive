@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body>ul {
+            width:50vw;
+            padding: 10px 60px;
+            display: flex;
+            align-items: flex-start;
+            list-style: none;
+           
+        }
+        body>ul li{
+            padding: 0 20px;
+            position: relative;
+            
+        }
+        body>ul>li ul{
+            display: none;
+            visibility: hidden;
+            opacity: 0;
+            list-style: none;
+           position: absolute;
+            left: -40px;
+        }
+        body>ul>li ul li{
+            display: block;
+            padding: 5px 20px;
+            white-space: nowrap;
+            border: 1px solid;
+        }
+         body>ul>li:nth-child(2):hover>ul{
+             display: block;
+            visibility: visible;
+            opacity: 1;
+         }
+         img{
+            visibility: hidden;
+            z-index: -100;
+            opacity: 0;
+            display: none;
+            height: 40px;
+            width: 70px;
+            padding: 0;
+         }
+         @media (max-width:600px) {
+
+
+           body{
+            margin: 0;
+            padding: 0;
+            align-items: end;
+            overflow-x: 0;
+           }
+           body>ul{
+            display: none; 
+            
+            flex-flow: column nowrap;
+           align-items: flex-end;
+           justify-content: space-around;
+            margin: 0;
+            height: 600px;
+            padding: 0 0 10px 0;
+            
+            width: 100%;
+           
+            transition: all ease-in-out 100ms;
+           }
+           body>ul li{
+            height: calc(100%/3);
+            width:50%;
+            display: flex;
+            background-color: black;
+            color: white;
+            align-items: center;
+            padding:0 auto;
+            justify-content:center ;
+           
+           }
+           img{
+            visibility: visible;
+            display: block;
+            opacity: 1;
+            z-index: 200;
+            height: 60px;
+            width: 60px;
+            margin-bottom: 10px;
+            background-color: rgb(243, 248, 246);
+            position: absolute;
+            right: 0;
+            top:0;
+            cursor: pointer;
+           }
+          
+           
+           
+         }
+
+    </style>
+</head>
+<body>
+    <a><img src="../Black___White_Minimalist_Business_Logo-removebg-preview.png"></a>
+    <ul>
+        <li>home</li>
+        <li>blog
+            <ul><li>game</li>
+                <li>app</li>
+            </ul>
+        </li>
+        <li>gallery</li>
+</ul>
+</body>
+<script src="./script.js"></script>
+</html>
